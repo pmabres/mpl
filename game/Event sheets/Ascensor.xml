@@ -2,5 +2,39 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Ascensor</name>
-    <events />
+    <events>
+        <variable constant="0" name="Mov" sid="9544338526240278" static="0" type="number">0</variable>
+        <event-block sid="9071220753808763">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="6002999090360692" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="9168298014598121" type="Ascensor">
+                    <param id="0" name="Angle">270</param>
+                    <param id="1" name="Distance">10</param>
+                </action>
+                <action id="-10" name="Add to" sid="6305686746494131" type="System">
+                    <param id="0" name="Variable">Mov</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2234658396488287">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="407467404699327" type="System">
+                    <param id="0" name="Variable">Mov</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1927512795416047" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

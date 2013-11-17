@@ -23,6 +23,9 @@
                 <action behavior="Platform" id="4" name="Set jump strength" sid="6983113179990167" type="PJ">
                     <param id="0" name="Jump strength">PD.Platform.JumpStrength</param>
                 </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="1864674639983279" type="PJ">
+                    <param id="0" name="Gravity">PD.Platform.Gravity</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9361304206492953">
@@ -44,6 +47,68 @@
                 <action id="-13" name="Set boolean" sid="9442483839256476" type="PD">
                     <param id="0" name="Instance variable">Activo</param>
                     <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9521682367186294">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="9619506460942662" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="3734939110594101" type="PD">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="100111211099253">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9530206835543594" type="PD">
+                            <param id="0" name="Instance variable">Lado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="4998955492101155" type="Bullet">
+                            <param id="0" name="Speed">-Bullet.Bullet.Speed</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7225335332973097">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1725669550626916" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2829721442289048" type="PD">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5127584704448879" type="PD">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7088474351397291">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2416366668736786" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="117278204598607" type="PD">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="7827436183263347" type="PD">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>

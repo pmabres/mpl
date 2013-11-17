@@ -23,6 +23,9 @@
                 <action behavior="Platform" id="4" name="Set jump strength" sid="1716434303565167" type="PJ">
                     <param id="0" name="Jump strength">MJ.Platform.JumpStrength</param>
                 </action>
+                <action behavior="Platform" id="5" name="Set gravity" sid="9265278834495017" type="PJ">
+                    <param id="0" name="Gravity">MJ.Platform.Gravity</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7065683707352489">

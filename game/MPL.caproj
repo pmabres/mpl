@@ -15,8 +15,10 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -25,8 +27,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>640</width>
-        <height>480</height>
+        <width>1280</width>
+        <height>1024</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <use-loader-layout>0</use-loader-layout>
@@ -94,6 +96,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Activo" sid="9422780347340144" type="boolean" />
+                    <instance-variable comment="0-Derecha 1-Izquierda" name="Lado" sid="7528448181933868" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2120154637522832">
@@ -125,6 +128,7 @@
                 <instance-variables>
                     <instance-variable name="Pressed" sid="7072330903913241" type="boolean" />
                     <instance-variable name="Timer" sid="1650859145648541" type="number" />
+                    <instance-variable name="Numero" sid="4029804647707449" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Solid" sid="5361742201217974">
@@ -166,6 +170,77 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5150450584632571" speed="5">
                     <frame duration="1" hotspotX="0.512821" hotspotY="0.512821" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Puertas" sid="8716691475123017">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Active" sid="3436802775039435" type="boolean" />
+                <instance-variable name="Numero" sid="1861973118113479" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="5551433648053137">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8738180819862731" speed="5">
+                    <frame duration="1" hotspotX="1.28125" hotspotY="0.336842" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="3848215287522975">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1332534302763736" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Box" sid="1054658068835304">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="1914343803154781">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4872283387212363" speed="5">
+                    <frame duration="1" hotspotX="0.716216" hotspotY="0.662162" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ascensor" sid="601209487002225">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Active" sid="3551915607306643" type="boolean" />
+                <instance-variable name="Numero" sid="78853689527959" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="3526925533200433">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4147731619663237" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.515152" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="81558618515199">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="6409232991316148">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="6494339991113782">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2297960548462888" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462" />
                 </animation>
             </animation-folder>
         </object-type>
