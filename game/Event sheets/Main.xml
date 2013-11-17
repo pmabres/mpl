@@ -31,5 +31,31 @@
                 <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
             </actions>
         </event-block>
+        <event-block any="1" sid="7109248261096622">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9848833158902875" type="Bullet">
+                    <param id="0" name="Object">DL</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="7822026216235832" type="Bullet">
+                    <param id="0" name="Object">MJ</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2244782844541779" type="PJ" />
+            </actions>
+        </event-block>
+        <event-block any="1" sid="6384425379600511">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8685405606330891" type="Bullet">
+                    <param id="0" name="Object">Plataformas</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="6528620219366374" type="Bullet">
+                    <param id="0" name="Object">Paneles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1358412389737075" type="Bullet" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
