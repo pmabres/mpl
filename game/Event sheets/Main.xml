@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main</name>
+    <events>
+        <include>Paneles</include>
+        <include>Policia</include>
+        <include>Michel</include>
+        <include>Demoledor</include>
+        <event-block sid="891220799817862">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2129160100224186" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3391835111097294" type="DL">
+                    <param id="0" name="X">PJ.X</param>
+                    <param id="1" name="Y">PJ.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="63330340106794" type="DL">
+                    <param id="0" name="Pin to">PJ</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="1169530528580181" type="PJ">
+                    <param id="0" name="Jump strength">DL.Platform.JumpStrength</param>
+                </action>
+                <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

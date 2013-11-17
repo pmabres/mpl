@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Demoledor</name>
+    <events>
+        <event-block sid="9480891291569983">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="111814906495188" type="Keyboard">
+                    <param id="0" name="Key">49 (1)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="5842893343314421" type="MJ" />
+                <action behavior="Pin" id="1" name="Unpin" sid="4836502298577443" type="PD" />
+                <action id="-3" name="Set position" sid="8505543485335818" type="PJ">
+                    <param id="0" name="X">DL.X</param>
+                    <param id="1" name="Y">DL.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6330277965182603" type="DL">
+                    <param id="0" name="Pin to">PJ</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="2849228754474422" type="PJ">
+                    <param id="0" name="Jump strength">DL.Platform.JumpStrength</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8541036291544276">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1937648439634762" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3341838221271638" type="DL">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="9" name="Set scale" sid="8380138878581736" type="DL">
+                    <param id="0" name="Scale">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9349085237602652">
+            <conditions>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="5328065454187516" type="DL" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1418539709176388" type="DL">
+                    <param id="0" name="Instance variable">Activo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6403312382010923">
+            <conditions>
+                <condition id="-22" name="Else" sid="4775684063350888" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="3084685164124138" type="DL">
+                    <param id="0" name="Instance variable">Activo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

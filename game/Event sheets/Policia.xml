@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Policia</name>
+    <events>
+        <event-block sid="1769779834732757">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4190402219159197" type="Keyboard">
+                    <param id="0" name="Key">51 (3)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="2745160670588033" type="DL" />
+                <action behavior="Pin" id="1" name="Unpin" sid="3327538809839929" type="MJ" />
+                <action id="-3" name="Set position" sid="9211171718225884" type="PJ">
+                    <param id="0" name="X">PD.X</param>
+                    <param id="1" name="Y">PD.Y</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8671474835521725" type="PD">
+                    <param id="0" name="Pin to">PJ</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Platform" id="4" name="Set jump strength" sid="6983113179990167" type="PJ">
+                    <param id="0" name="Jump strength">PD.Platform.JumpStrength</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9361304206492953">
+            <conditions>
+                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="8091927504878657" type="PD" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="434644753636684" type="PD">
+                    <param id="0" name="Instance variable">Activo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9264443006664966">
+            <conditions>
+                <condition id="-22" name="Else" sid="1120284914361578" type="System" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="9442483839256476" type="PD">
+                    <param id="0" name="Instance variable">Activo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

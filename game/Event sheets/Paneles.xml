@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Paneles</name>
+    <events>
+        <event-block sid="4991748076167517">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4263720342230991" type="DL">
+                    <param id="0" name="Object">Paneles</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6715344463282367" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1358835693754669">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="5214492330705039" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="9031593496009131" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="8067955394646714" type="Paneles">
+                    <param id="0" name="Instance variable">Timer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3865466539623062">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7429185896873135" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1409445007033065" type="Paneles">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6265445733198837">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2148535218954835" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3798245683449047" type="Paneles">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="877564348233656">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9215257048602139" type="Paneles">
+                    <param id="0" name="Instance variable">Timer</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="801485760739193" type="Paneles">
+                    <param id="0" name="Instance variable">Timer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="9259557775458452" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
