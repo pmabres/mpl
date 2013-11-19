@@ -222,6 +222,47 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9624023121492369">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="931056442621612" type="DL">
+                    <param id="0" name="Object">Paneles</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3885986114913608" type="Paneles">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3531089728984759" type="Puertas">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3544382658557836" type="Ascensor">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6521828166219746" type="Paneles">
+                    <param id="0" name="Instance variable">Tipo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="8895423736945952" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6783515415514778" type="Puertas">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8976819348260283" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="5821945295204464">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="409459548277908" type="Bullet">
@@ -271,6 +312,33 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="791920453699071" type="Puertas">
+                    <param id="0" name="Instance variable">Active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2063868390331761">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7756292932887007" type="Bullet">
+                    <param id="0" name="Object">Paneles</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2527676899851618" type="Paneles">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="7821415411416296" type="Puertas">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1470676802240292" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4082428947067088" type="Puertas">
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>

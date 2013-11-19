@@ -26,6 +26,9 @@
                 <action behavior="Platform" id="5" name="Set gravity" sid="1864674639983279" type="PJ">
                     <param id="0" name="Gravity">PD.Platform.Gravity</param>
                 </action>
+                <action id="-20" name="Set layout scale" sid="1496035849926772" type="System">
+                    <param id="0" name="Scale">1.0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9361304206492953">

@@ -26,6 +26,9 @@
                 <action behavior="Platform" id="5" name="Set gravity" sid="9265278834495017" type="PJ">
                     <param id="0" name="Gravity">MJ.Platform.Gravity</param>
                 </action>
+                <action id="-20" name="Set layout scale" sid="143549311182829" type="System">
+                    <param id="0" name="Scale">1.0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7065683707352489">
@@ -49,6 +52,33 @@
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="9886668221958589">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6772383033890693" type="MJ">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="6029564303170506" type="MJ">
+                    <param id="0" name="X">PD.X</param>
+                    <param id="1" name="Y">PD.Y</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="466137400452947" type="MJ">
+                    <param id="0" name="Instance variable">Finish</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4595325348514885">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="4975681849752041" type="MJ" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="1076625194916437" type="MJ" />
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

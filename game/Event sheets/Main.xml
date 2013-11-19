@@ -29,9 +29,15 @@
                     <param id="0" name="Jump strength">DL.Platform.JumpStrength</param>
                 </action>
                 <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="6675828234865239" type="MJ">
+                    <param id="0" name="Obstacle">DL</param>
+                </action>
+                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1743925562148889" type="MJ">
+                    <param id="0" name="Obstacle">PD</param>
+                </action>
             </actions>
         </event-block>
-        <event-block any="1" sid="7109248261096622">
+        <event-block any="1" disabled="1" sid="7109248261096622">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="9848833158902875" type="Bullet">
                     <param id="0" name="Object">DL</param>
@@ -52,9 +58,27 @@
                 <condition id="0" name="On collision with another object" sid="6528620219366374" type="Bullet">
                     <param id="0" name="Object">Paneles</param>
                 </condition>
+                <condition id="0" name="On collision with another object" sid="6298477588845457" type="Bullet">
+                    <param id="0" name="Object">Puertas</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="1358412389737075" type="Bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="3848227064596637">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7279765612274051" type="Keyboard">
+                    <param id="0" name="Key">52 (4)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="5314993316986687" type="DL" />
+                <action behavior="Pin" id="1" name="Unpin" sid="4828923651637858" type="MJ" />
+                <action behavior="Pin" id="1" name="Unpin" sid="1632340483248202" type="PD" />
+                <action id="-20" name="Set layout scale" sid="7337634279868105" type="System">
+                    <param id="0" name="Scale">0.5</param>
+                </action>
             </actions>
         </event-block>
     </events>
