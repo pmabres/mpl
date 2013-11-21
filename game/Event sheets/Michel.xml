@@ -24,7 +24,7 @@
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="7948834197014675" type="MJ">
                     <param id="0" name="Pin to">PJ</param>
-                    <param id="1" name="Mode">0</param>
+                    <param id="1" name="Mode">4</param>
                 </action>
                 <action behavior="Platform" id="4" name="Set jump strength" sid="1716434303565167" type="PJ">
                     <param id="0" name="Jump strength">MJ.Platform.JumpStrength</param>
@@ -56,6 +56,10 @@
                 <action id="-13" name="Set boolean" sid="9656073274562211" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="5834477672380359" type="MJ">
+                    <param id="0" name="Instance variable">Estado</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -101,8 +105,9 @@
                     <param id="0" name="Animation">&quot;Izq&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="5436570786554642" type="MJ">
-                    <param id="0" name="State">0</param>
+                <action id="-10" name="Set value" sid="4339031244617479" type="MJ">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
@@ -136,8 +141,9 @@
                     <param id="0" name="Animation">&quot;Izq&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="7" name="Set mirrored" sid="256125123201394" type="MJ">
-                    <param id="0" name="State">1</param>
+                <action id="-10" name="Set value" sid="2269722271627193" type="MJ">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -157,32 +163,163 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="5681448782806094">
+        <event-block sid="5681448782806094">
             <conditions>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3114160576245905" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
                 </condition>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="153370322339277" type="MJ">
-                    <param id="0" name="Object">PD</param>
+                <condition id="-7" name="Compare instance variable" sid="1402010842183005" type="MJ">
+                    <param id="0" name="Instance variable">Estado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="3" name="Set enabled" sid="5655077133884339" type="MJ">
-                    <param id="0" name="Set">1</param>
-                </action>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="1414473671845852" type="MJ">
-                    <param id="0" name="X">PD.X</param>
-                    <param id="1" name="Y">PD.Y</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="7223745894147796">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="153370322339277" type="MJ">
+                            <param id="0" name="Object">PD</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="9206044182520672" type="MJ" />
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="3079939826437271" type="MJ">
+                            <param id="0" name="X">PD.X</param>
+                            <param id="1" name="Y">PD.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6703771107778226">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1974181248005525" type="MJ">
+                            <param id="0" name="Object">DL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="6433882436082845" type="MJ" />
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="9778409805564599" type="MJ">
+                            <param id="0" name="X">DL.X</param>
+                            <param id="1" name="Y">DL.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="1055521466834886">
             <conditions>
                 <condition behavior="Pathfinding" id="0" name="On path found" sid="7455435818053971" type="MJ" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2200170318056506" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
             </conditions>
             <actions>
+                <action id="-10" name="Set value" sid="554760133428439" type="MJ">
+                    <param id="0" name="Instance variable">Estado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="7544161301790729" type="MJ" />
             </actions>
+        </event-block>
+        <event-block sid="4456091287500898">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2691598542252476" type="MJ">
+                    <param id="0" name="Instance variable">Estado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition behavior="Pathfinding" id="4" name="Is moving along path" sid="2255140008279898" type="MJ" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="4150167871724754">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="7041149363091583" type="MJ">
+                            <param id="0" name="Object">PD</param>
+                        </condition>
+                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="6596782711397312" type="MJ">
+                            <param id="0" name="Object">DL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="1943797667251512" type="MJ" />
+                        <action id="-10" name="Set value" sid="3876222799623023" type="MJ">
+                            <param id="0" name="Instance variable">Estado</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3127290753922562">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1234151415896589" type="MJ">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8078510203585614" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7505367942864433" type="MJ">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="878746113403291">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7049148444116085" type="MJ">
+                    <param id="0" name="Instance variable">Lado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9840697552739337" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="4147576054083568" type="MJ">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="6608804198935589">
+            <conditions>
+                <condition behavior="Pathfinding" id="5" name="On arrived" sid="3866116808442158" type="MJ" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3946993688191575">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5804811405166825" type="MJ">
+                            <param id="0" name="Object">PD</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="9907236185505456" type="MJ" />
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="3896978685003166" type="MJ">
+                            <param id="0" name="X">PD.X</param>
+                            <param id="1" name="Y">PD.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1814734198566996">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="3977672504724271" type="MJ">
+                            <param id="0" name="Object">DL</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="5884570365935347" type="MJ" />
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="1287658633343959" type="MJ">
+                            <param id="0" name="X">DL.X</param>
+                            <param id="1" name="Y">DL.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
