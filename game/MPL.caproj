@@ -10,16 +10,18 @@
     <unique-id>1lr9mbm8qekw1</unique-id>
     <saved-with-version>14600</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -88,16 +90,74 @@
                     <behavior-type name="Pin" sid="8143675152834439">
                         <behavior id="Pin" />
                     </behavior-type>
-                    <behavior-type name="LineOfSight" sid="9782881233321565">
+                    <behavior-type name="LineOfSight" sid="7698942997175183">
                         <behavior id="LOS" />
                     </behavior-type>
-                    <behavior-type name="Pathfinding" sid="245387327770781">
+                    <behavior-type name="Pathfinding" sid="8630182013558829">
                         <behavior id="Pathfinding" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder expanded="1">
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9804225911363781" speed="5">
-                        <frame duration="1" hotspotX="0.509091" hotspotY="0.5125" />
+                    <animation framecount="7" loop="0" name="Izq" pingpong="0" repeatcount="1" repeatto="0" sid="1353616373909016" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Stay" pingpong="0" repeatcount="1" repeatto="0" sid="7382013970054627" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.508475" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -106,6 +166,7 @@
                 <instance-variables>
                     <instance-variable name="Activo" sid="9422780347340144" type="boolean" />
                     <instance-variable comment="0-Derecha 1-Izquierda" name="Lado" sid="7528448181933868" type="number" />
+                    <instance-variable name="Finish" sid="306989080441115" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2120154637522832">
@@ -145,6 +206,9 @@
                     <behavior-type name="Solid" sid="162796828871767">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Physics" sid="9898866364137832">
+                        <behavior id="Physics" />
+                    </behavior-type>
                 </behaviors>
                 <texture />
             </object-type>
@@ -173,8 +237,8 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.03375" y="0.507353" />
-                                <point x="0.965" y="0.507353" />
+                                <point x="0.01125" y="0.378677" />
+                                <point x="0.98625" y="0.382353" />
                                 <point x="1" y="0.966912" />
                                 <point x="0" y="0.974265" />
                             </collision-poly>
@@ -197,12 +261,23 @@
                 </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4147731619663237" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.515152" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Box" sid="1054658068835304">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Platform" sid="3072529899079124">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="7014884632426676">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="710400273338373">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4872283387212363" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -215,9 +290,33 @@
                     <instance-variable name="Active" sid="3436802775039435" type="boolean" />
                     <instance-variable name="Numero" sid="1861973118113479" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="6675950623995259">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder expanded="1">
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8738180819862731" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PuertaComun" sid="2583692793540254">
+                <plugin id="Sprite" />
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1511930966455557" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Portal" sid="952716862196686">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Numero" sid="4200629046038718" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7520507591324684" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -231,12 +330,35 @@
                 <behavior-type name="ScrollTo" sid="3741246887208869">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="Physics" sid="2636506353639782">
+                    <behavior id="Physics" />
+                </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5150450584632571" speed="5">
                     <frame duration="1" hotspotX="0.512821" hotspotY="0.512821" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Puente" sid="44133945106841">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Numero" sid="3085575062120694" type="number" />
+                <instance-variable name="Activo" sid="835314645539897" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="5199807221109149">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6402680989127406" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Number" sid="5780756735405158">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
@@ -254,6 +376,8 @@
         <event-sheet>Globales.xml</event-sheet>
         <event-sheet>Mundo.xml</event-sheet>
         <event-sheet>Ascensor.xml</event-sheet>
+        <event-sheet>Cajas.xml</event-sheet>
+        <event-sheet>Puente.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />

@@ -12,6 +12,12 @@
             <actions>
                 <action behavior="Pin" id="1" name="Unpin" sid="6338103837520672" type="DL" />
                 <action behavior="Pin" id="1" name="Unpin" sid="4997372941226172" type="PD" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="1083336875850146" type="PJ">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="9475987778018715" type="PJ">
+                    <param id="0" name="Mode">0</param>
+                </action>
                 <action id="-3" name="Set position" sid="9704624292785351" type="PJ">
                     <param id="0" name="X">MJ.X</param>
                     <param id="1" name="Y">MJ.Y</param>
@@ -53,32 +59,130 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9886668221958589">
+        <event-block sid="1255764639011172">
             <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="6772383033890693" type="MJ">
-                    <param id="0" name="Object">PD</param>
+                <condition id="1" name="Is overlapping another object" sid="1104456830434184" type="Portal">
+                    <param id="0" name="Object">MJ</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1089070809316969" type="Portal">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="6029564303170506" type="MJ">
-                    <param id="0" name="X">PD.X</param>
-                    <param id="1" name="Y">PD.Y</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="466137400452947" type="MJ">
+                <action id="-13" name="Set boolean" sid="1096431292269295" type="MJ">
                     <param id="0" name="Instance variable">Finish</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
-            <sub-events>
-                <event-block sid="4595325348514885">
-                    <conditions>
-                        <condition behavior="Pathfinding" id="0" name="On path found" sid="4975681849752041" type="MJ" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Pathfinding" id="1" name="Move along path" sid="1076625194916437" type="MJ" />
-                    </actions>
-                </event-block>
-            </sub-events>
+        </event-block>
+        <event-block sid="2983761453437011">
+            <conditions>
+                <condition id="5" name="On any finished" sid="9055948478832133" type="MJ" />
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="6507109361755868" type="MJ">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6817758036434892">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2089851688551937" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4192943107288703" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9784835986901525" type="MJ">
+                    <param id="0" name="Animation">&quot;Izq&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="5436570786554642" type="MJ">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6833453750660992">
+            <conditions>
+                <condition id="3" name="On key released" sid="393853435185912" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="1685763648521273" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9248965382399637" type="MJ">
+                    <param id="0" name="Animation">&quot;Stay&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="192437767529169">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2162089018224634" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="5204273306084891" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3778392258745287" type="MJ">
+                    <param id="0" name="Animation">&quot;Izq&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="256125123201394" type="MJ">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1388314767100744">
+            <conditions>
+                <condition id="3" name="On key released" sid="8815732391962664" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="144324809523748" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="3461875534758421" type="MJ">
+                    <param id="0" name="Animation">&quot;Stay&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="5681448782806094">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3114160576245905" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="153370322339277" type="MJ">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="3" name="Set enabled" sid="5655077133884339" type="MJ">
+                    <param id="0" name="Set">1</param>
+                </action>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="1414473671845852" type="MJ">
+                    <param id="0" name="X">PD.X</param>
+                    <param id="1" name="Y">PD.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1055521466834886">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="7455435818053971" type="MJ" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="7544161301790729" type="MJ" />
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

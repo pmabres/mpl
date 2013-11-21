@@ -12,6 +12,12 @@
             <actions>
                 <action behavior="Pin" id="1" name="Unpin" sid="2745160670588033" type="DL" />
                 <action behavior="Pin" id="1" name="Unpin" sid="3327538809839929" type="MJ" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="6348204103805421" type="PJ">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="8450831187044248" type="PJ">
+                    <param id="0" name="Mode">0</param>
+                </action>
                 <action id="-3" name="Set position" sid="9211171718225884" type="PJ">
                     <param id="0" name="X">PD.X</param>
                     <param id="1" name="Y">PD.Y</param>
@@ -82,6 +88,24 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="8373982622600273">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9331931502131843" type="Portal">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="439873466846952" type="Portal">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="5170970092660693" type="PD">
+                    <param id="0" name="Instance variable">Finish</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="7225335332973097">
             <conditions>

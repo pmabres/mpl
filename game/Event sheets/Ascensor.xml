@@ -3,201 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Ascensor</name>
     <events>
-        <variable constant="0" name="1Nivel" sid="7508141434931871" static="0" type="number">380</variable>
-        <event-block sid="9071220753808763">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="6002999090360692" type="Ascensor">
-                    <param id="0" name="Instance variable">Active</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block collapsed="1" sid="5448659118123209">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2486467003521163" type="Ascensor">
-                            <param id="0" name="Instance variable">Numero</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="373258595456319">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="3383080133030437" type="Ascensor">
-                                    <param id="0" name="Instance variable">Estado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="9168298014598121" type="Ascensor">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="6305686746494131" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7331978076595357">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5675300560947197" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="3693477219698733" type="Ascensor">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="2804575574255252" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block collapsed="1" sid="6437298864586604">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1907405595896862" type="Ascensor">
-                            <param id="0" name="Instance variable">Numero</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2916966848059431">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="572883745878048" type="Ascensor">
-                                    <param id="0" name="Instance variable">Estado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="7467846711946792" type="Ascensor">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="5403525472020922" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="6467763828157779">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8315425292241957" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="5870426906819397" type="Ascensor">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="6909597464268298" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block collapsed="1" sid="4735130878517811">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="630517786569733" type="Ascensor">
-                            <param id="0" name="Instance variable">Numero</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">51</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="8650849783620254">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="167930315901917" type="Ascensor">
-                                    <param id="0" name="Instance variable">Estado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="5645535286759591" type="Ascensor">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="3883632982255851" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2535537048448391">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="13511453778445" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="1006522687512014" type="Ascensor">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="5057572222879617" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block collapsed="1" sid="3560285475018756">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6099705841250786" type="Ascensor">
-                            <param id="0" name="Instance variable">Numero</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2875562790941437">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="3917306293423473" type="Ascensor">
-                                    <param id="0" name="Instance variable">Estado</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="33590066965251" type="Ascensor">
-                                    <param id="0" name="Angle">270</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="1729171769089024" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1081316246431525">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="5072581764398793" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-23" name="Move at angle" sid="334762356976619" type="Ascensor">
-                                    <param id="0" name="Angle">90</param>
-                                    <param id="1" name="Distance">10</param>
-                                </action>
-                                <action id="-11" name="Add to" sid="878326428203796" type="Ascensor">
-                                    <param id="0" name="Instance variable">Mov</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
+        <variable constant="0" name="1Nivel" sid="7508141434931871" static="0" type="number">382</variable>
         <event-block collapsed="1" sid="2234658396488287">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="407467404699327" type="Ascensor">
@@ -209,6 +15,9 @@
                     <param id="0" name="Instance variable">Numero</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="1882133479771651" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
                 </condition>
             </conditions>
             <actions>
@@ -262,6 +71,9 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">5</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4600466616295928" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="1006282973480017" type="Ascensor">
@@ -313,6 +125,9 @@
                     <param id="0" name="Instance variable">Numero</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">51</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6764019565251523" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
                 </condition>
             </conditions>
             <actions>
@@ -366,6 +181,9 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2048271477361022" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="2364557115724774" type="Ascensor">
@@ -401,6 +219,202 @@
                         <action id="-10" name="Set value" sid="164263153174473" type="Ascensor">
                             <param id="0" name="Instance variable">Estado</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="5448659118123209">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="2486467003521163" type="Ascensor">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6002999090360692" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="373258595456319">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3383080133030437" type="Ascensor">
+                            <param id="0" name="Instance variable">Estado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="9168298014598121" type="Ascensor">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="6305686746494131" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7331978076595357">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5675300560947197" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="3693477219698733" type="Ascensor">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="2804575574255252" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="6437298864586604">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1907405595896862" type="Ascensor">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="2976857007088593" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2916966848059431">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="572883745878048" type="Ascensor">
+                            <param id="0" name="Instance variable">Estado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="7467846711946792" type="Ascensor">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="5403525472020922" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6467763828157779">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8315425292241957" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5870426906819397" type="Ascensor">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="6909597464268298" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="4735130878517811">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="630517786569733" type="Ascensor">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">51</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8227648845745814" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8650849783620254">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="167930315901917" type="Ascensor">
+                            <param id="0" name="Instance variable">Estado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="5645535286759591" type="Ascensor">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="3883632982255851" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2535537048448391">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="13511453778445" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="1006522687512014" type="Ascensor">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="5057572222879617" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="3560285475018756">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6099705841250786" type="Ascensor">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="8375906222438211" type="Ascensor">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2875562790941437">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3917306293423473" type="Ascensor">
+                            <param id="0" name="Instance variable">Estado</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="33590066965251" type="Ascensor">
+                            <param id="0" name="Angle">270</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="1729171769089024" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1081316246431525">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5072581764398793" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-23" name="Move at angle" sid="334762356976619" type="Ascensor">
+                            <param id="0" name="Angle">90</param>
+                            <param id="1" name="Distance">10</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="878326428203796" type="Ascensor">
+                            <param id="0" name="Instance variable">Mov</param>
+                            <param id="1" name="Value">10</param>
                         </action>
                     </actions>
                 </event-block>

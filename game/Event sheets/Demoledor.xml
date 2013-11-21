@@ -12,6 +12,12 @@
             <actions>
                 <action behavior="Pin" id="1" name="Unpin" sid="5842893343314421" type="MJ" />
                 <action behavior="Pin" id="1" name="Unpin" sid="4836502298577443" type="PD" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="6929037247524137" type="PJ">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="9069518285225019" type="PJ">
+                    <param id="0" name="Mode">1</param>
+                </action>
                 <action id="-3" name="Set position" sid="8505543485335818" type="PJ">
                     <param id="0" name="X">DL.X</param>
                     <param id="1" name="Y">DL.Y</param>
@@ -28,21 +34,6 @@
                 </action>
                 <action id="-20" name="Set layout scale" sid="3171739275136151" type="System">
                     <param id="0" name="Scale">1.0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="8541036291544276">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="1937648439634762" type="Keyboard">
-                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="3341838221271638" type="DL">
-                    <param id="0" name="Instance variable">Activo</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="9" name="Set scale" sid="8380138878581736" type="DL">
-                    <param id="0" name="Scale">2</param>
                 </action>
             </actions>
         </event-block>
@@ -64,6 +55,24 @@
             <actions>
                 <action id="-13" name="Set boolean" sid="3084685164124138" type="DL">
                     <param id="0" name="Instance variable">Activo</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6190590836901329">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7303208078352249" type="Portal">
+                    <param id="0" name="Object">DL</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="4777488076881674" type="Portal">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1447882311704008" type="DL">
+                    <param id="0" name="Instance variable">Finish</param>
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>

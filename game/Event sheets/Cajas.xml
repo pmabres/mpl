@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cajas</name>
+    <events>
+        <variable constant="0" name="Keyboard" sid="5959031549645904" static="0" type="text"></variable>
+        <event-block any="1" sid="5034069174709193">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="4230257047635195" type="MJ">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="602086961840535" type="Box">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4024414839877711">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2510834615097081" type="PD">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="6275088575801643" type="Box">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="587219173241415">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="3976721237096473" type="DL">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Solid" id="0" name="Set enabled" sid="4130920970465524" type="Box">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

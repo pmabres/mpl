@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>Puente</include>
+        <include>Cajas</include>
         <include>Puertas</include>
         <include>Mundo</include>
         <include>Globales</include>
@@ -29,25 +31,6 @@
                     <param id="0" name="Jump strength">DL.Platform.JumpStrength</param>
                 </action>
                 <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
-                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="6675828234865239" type="MJ">
-                    <param id="0" name="Obstacle">DL</param>
-                </action>
-                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="1743925562148889" type="MJ">
-                    <param id="0" name="Obstacle">PD</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" disabled="1" sid="7109248261096622">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="9848833158902875" type="Bullet">
-                    <param id="0" name="Object">DL</param>
-                </condition>
-                <condition id="0" name="On collision with another object" sid="7822026216235832" type="Bullet">
-                    <param id="0" name="Object">MJ</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="2244782844541779" type="PJ" />
             </actions>
         </event-block>
         <event-block any="1" sid="6384425379600511">
@@ -76,8 +59,49 @@
                 <action behavior="Pin" id="1" name="Unpin" sid="5314993316986687" type="DL" />
                 <action behavior="Pin" id="1" name="Unpin" sid="4828923651637858" type="MJ" />
                 <action behavior="Pin" id="1" name="Unpin" sid="1632340483248202" type="PD" />
+                <action behavior="Platform" id="11" name="Set enabled" sid="3426939501456957" type="PJ">
+                    <param id="0" name="State">0</param>
+                </action>
                 <action id="-20" name="Set layout scale" sid="7337634279868105" type="System">
-                    <param id="0" name="Scale">0.5</param>
+                    <param id="0" name="Scale">0.425</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1682118503699177">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="8609987370931688" type="DL">
+                    <param id="0" name="Instance variable">Finish</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="6326741889889557" type="MJ">
+                    <param id="0" name="Instance variable">Finish</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="9832764718657391" type="PD">
+                    <param id="0" name="Instance variable">Finish</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="6159960599897188" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="9455548555577472">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="7315550832122443" type="PuertaComun">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4843061822982147" type="PuertaComun">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9974976134436414">
+            <conditions>
+                <condition id="-22" name="Else" sid="4592584801839116" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2561934286335318" type="PuertaComun">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>

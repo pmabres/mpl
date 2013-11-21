@@ -11,10 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Layout 1</layout>
-        <event-sheet>Paneles</event-sheet>
-        <event-sheet>Puertas</event-sheet>
         <event-sheet>Main</event-sheet>
-        <event-sheet>Ascensor</event-sheet>
         <event-sheet>Policia</event-sheet>
         <event-sheet>Demoledor</event-sheet>
         <event-sheet active="1">Michel</event-sheet>
