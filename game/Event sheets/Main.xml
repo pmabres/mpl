@@ -49,6 +49,28 @@
                 <action id="-9" name="Destroy" sid="1358412389737075" type="Bullet" />
             </actions>
         </event-block>
+        <event-block any="1" sid="3280151771989621">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8792522596133925" type="MJ">
+                    <param id="0" name="Object">DL</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="5121154772555347" type="MJ">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="5627982396919167" type="Bullet">
+                    <param id="0" name="Object">DL</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="3340353491815014" type="Bullet">
+                    <param id="0" name="Object">MJ</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="7294345561564124" type="DL">
+                    <param id="0" name="Object">PD</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="9839198944517211" type="System" />
+            </actions>
+        </event-block>
         <event-block sid="3848227064596637">
             <conditions>
                 <condition id="2" name="Key is down" sid="7279765612274051" type="Keyboard">
@@ -85,10 +107,8 @@
         </event-block>
         <event-block sid="9455548555577472">
             <conditions>
-                <condition id="9" name="Is overlapping at offset" sid="954668061656144" type="PD">
+                <condition id="0" name="On collision with another object" sid="954668061656144" type="PD">
                     <param id="0" name="Object">PuertaComun</param>
-                    <param id="1" name="Offset X">20</param>
-                    <param id="2" name="Offset Y">0</param>
                 </condition>
             </conditions>
             <actions>

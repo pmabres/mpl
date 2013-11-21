@@ -19,9 +19,9 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -345,9 +345,6 @@
             <object-type name="Box" sid="1054658068835304">
                 <plugin id="Sprite" />
                 <behaviors>
-                    <behavior-type name="Platform" sid="3072529899079124">
-                        <behavior id="Platform" />
-                    </behavior-type>
                     <behavior-type name="Physics" sid="7014884632426676">
                         <behavior id="Physics" />
                     </behavior-type>
@@ -400,10 +397,10 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0.267857" y="0" />
-                                <point x="0.428571" y="0.00134409" />
-                                <point x="0.428571" y="1" />
-                                <point x="0.267857" y="1" />
+                                <point x="0.776786" y="0.00403226" />
+                                <point x="0.9375" y="0.00537635" />
+                                <point x="0.9375" y="0.998656" />
+                                <point x="0.776786" y="0.998656" />
                             </collision-poly>
                         </frame>
                     </animation>

@@ -16,6 +16,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Demoledor</event-sheet>
         <event-sheet>Michel</event-sheet>
         <event-sheet>Puertas</event-sheet>
+        <event-sheet>Cajas</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
