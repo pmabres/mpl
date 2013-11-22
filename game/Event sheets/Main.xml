@@ -137,7 +137,26 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="6159960599897188" type="System" />
+                <action id="0" name="Set text" sid="6305130489360617" type="GameOver">
+                    <param id="0" name="Text">&quot;Felicitaciones Ganaste!!!&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="4875727999788142" type="GameOver">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="1" name="Y">LayoutHeight/2</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="513723800865454" type="DL">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7730064048449502" type="MJ">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4383570557942811" type="PD">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="5202584932747756" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Value">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9455548555577472">

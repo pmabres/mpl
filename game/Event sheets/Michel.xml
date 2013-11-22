@@ -336,31 +336,5 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="1881344678344982">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="419743288025064" type="MJ">
-                    <param id="0" name="Object">Box</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7615493161947462" type="PJ">
-                    <param id="0" name="Object">Box</param>
-                    <param id="1" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="1461952739887515">
-            <conditions>
-                <condition id="1" inverted="1" name="Is overlapping another object" sid="3067020398836167" type="MJ">
-                    <param id="0" name="Object">Box</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9231232817806524" type="PJ">
-                    <param id="0" name="Object">Box</param>
-                    <param id="1" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
