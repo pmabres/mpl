@@ -29,6 +29,9 @@
                     <param id="0" name="Pin to">DL</param>
                     <param id="1" name="Mode">0</param>
                 </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="53435393288278" type="PJ">
+                    <param id="0" name="Mode">1</param>
+                </action>
                 <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
                 <action behavior="Platform" id="0" name="Set ignoring input" sid="7463066531814656" type="DL">
                     <param id="0" name="Input">0</param>
@@ -38,6 +41,10 @@
                 </action>
                 <action behavior="Platform" id="0" name="Set ignoring input" sid="7120602441547893" type="PD">
                     <param id="0" name="Input">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="16219240220864" type="PJ">
+                    <param id="0" name="Instance variable">pinnedTo</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

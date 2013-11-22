@@ -360,10 +360,7 @@
                     <param id="0" name="Instance variable">Pressed</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="8367222172872279" type="Puertas">
-                    <param id="0" name="Instance variable">Active</param>
-                    <param id="1" name="Value">1</param>
-                </action>
+                <action id="-9" name="Destroy" sid="8367222172872279" type="Puertas" />
             </actions>
         </event-block>
         <comment>Timer</comment>
