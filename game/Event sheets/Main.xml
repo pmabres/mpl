@@ -3,18 +3,27 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
-        <include>PJ</include>
-        <include>Puente</include>
-        <include>Cajas</include>
-        <include>Puertas</include>
-        <include>Mundo</include>
-        <include>Globales</include>
-        <include>Enemigos</include>
-        <include>Ascensor</include>
-        <include>Paneles</include>
-        <include>Policia</include>
-        <include>Michel</include>
-        <include>Demoledor</include>
+        <variable comment="1-Game 2-GameOver" constant="0" name="Estado" sid="7608575964541381" static="0" type="number">0</variable>
+        <event-block sid="3920270302228765">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7040689665851284" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <include>PJ</include>
+                <include>Puente</include>
+                <include>Puertas</include>
+                <include>Ascensor</include>
+                <include>Paneles</include>
+                <include>Policia</include>
+                <include>Michel</include>
+                <include>Demoledor</include>
+            </sub-events>
+        </event-block>
         <event-block sid="891220799817862">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="2129160100224186" type="System" />
@@ -96,7 +105,23 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="9839198944517211" type="System" />
+                <action id="-3" name="Set position" sid="4765480151987147" type="GameOver">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="1" name="Y">LayoutHeight/2</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2089246441077116" type="DL">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="2529815716404367" type="MJ">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="598424295378801" type="PD">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="9237366959236422" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Value">2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1682118503699177">
@@ -149,6 +174,25 @@
                 <action id="-13" name="Set boolean" sid="6855379831931749" type="PuertaComun">
                     <param id="0" name="Instance variable">Open</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8705308038283186">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8943508617013912" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5339116404079973" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="4861990920740574" type="System" />
+                <action id="-9" name="Set value" sid="8148634651419172" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>

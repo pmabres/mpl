@@ -16,12 +16,12 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -35,6 +35,7 @@
         <height>1024</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -47,13 +48,37 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
-        <object-folder expanded="1" name="System">
+    <object-folder expanded="0">
+        <object-folder expanded="0" name="System">
             <object-type name="Keyboard" sid="2118685632930528">
                 <plugin id="Keyboard" />
             </object-type>
+            <object-type name="Help" sid="6205116289396909">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Number" sid="5780756735405158">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Text" sid="5669888472408282">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="BtnPlay" sid="4699758892441387">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Button" sid="6498156221992179" type="number" />
+                </instance-variables>
+                <animation-folder expanded="1">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3223356072303779" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507246" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507246" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GameOver" sid="5154646025646849">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
-        <object-folder expanded="1" name="Personajes">
+        <object-folder expanded="0" name="Personajes">
             <object-type name="DL" sid="4054197147921984">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -267,7 +292,7 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-folder expanded="1" name="World">
+        <object-folder expanded="0" name="World">
             <object-type name="Plataformas" sid="6624173070097332">
                 <plugin id="TiledBg" />
                 <behaviors>
@@ -414,6 +439,26 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Puente" sid="44133945106841">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Numero" sid="3085575062120694" type="number" />
+                    <instance-variable name="Activo" sid="835314645539897" type="boolean" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Solid" sid="5199807221109149">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Physics" sid="6891088591627969">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder expanded="1">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6402680989127406" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="PJ" sid="9429021767587178">
             <plugin id="Sprite" />
@@ -437,55 +482,36 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Puente" sid="44133945106841">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="Numero" sid="3085575062120694" type="number" />
-                <instance-variable name="Activo" sid="835314645539897" type="boolean" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Solid" sid="5199807221109149">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Physics" sid="6891088591627969">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6402680989127406" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Number" sid="5780756735405158">
-            <plugin id="Text" />
-        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
-        <layout>Layout 1.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
-        <event-sheet>Main.xml</event-sheet>
-        <event-sheet>Demoledor.xml</event-sheet>
-        <event-sheet>Michel.xml</event-sheet>
-        <event-sheet>Policia.xml</event-sheet>
-        <event-sheet>Enemigos.xml</event-sheet>
-        <event-sheet>Puertas.xml</event-sheet>
-        <event-sheet>Paneles.xml</event-sheet>
-        <event-sheet>Globales.xml</event-sheet>
-        <event-sheet>Mundo.xml</event-sheet>
-        <event-sheet>Ascensor.xml</event-sheet>
-        <event-sheet>Cajas.xml</event-sheet>
-        <event-sheet>Puente.xml</event-sheet>
-        <event-sheet>PJ.xml</event-sheet>
+        <event-folder expanded="1" name="Game">
+            <event-folder expanded="0" name="World">
+                <event-sheet>Ascensor.xml</event-sheet>
+                <event-sheet>Paneles.xml</event-sheet>
+                <event-sheet>Puente.xml</event-sheet>
+                <event-sheet>Puertas.xml</event-sheet>
+            </event-folder>
+            <event-folder expanded="0" name="PJ">
+                <event-sheet>Demoledor.xml</event-sheet>
+                <event-sheet>Michel.xml</event-sheet>
+                <event-sheet>PJ.xml</event-sheet>
+                <event-sheet>Policia.xml</event-sheet>
+            </event-folder>
+            <event-sheet>Main.xml</event-sheet>
+        </event-folder>
+        <event-sheet>Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="5" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
-    <files-folder expanded="1">
+    <files-folder expanded="0">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />
             <file name="icon-32.png" />

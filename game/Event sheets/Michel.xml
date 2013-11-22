@@ -219,6 +219,11 @@
         <event-block sid="1055521466834886">
             <conditions>
                 <condition behavior="Pathfinding" id="0" name="On path found" sid="7455435818053971" type="MJ" />
+                <condition id="-7" name="Compare instance variable" sid="4759656896624733" type="MJ">
+                    <param id="0" name="Instance variable">Estado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2200170318056506" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
                 </condition>
@@ -231,7 +236,7 @@
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="7544161301790729" type="MJ" />
             </actions>
         </event-block>
-        <event-block sid="4456091287500898">
+        <event-block collapsed="1" sid="4456091287500898">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="2691598542252476" type="MJ">
                     <param id="0" name="Instance variable">Estado</param>
@@ -295,7 +300,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block collapsed="1" sid="6608804198935589">
+        <event-block sid="6608804198935589">
             <conditions>
                 <condition behavior="Pathfinding" id="5" name="On arrived" sid="3866116808442158" type="MJ" />
             </conditions>

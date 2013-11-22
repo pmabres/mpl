@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Game</name>
     <sid>9183248868424408</sid>
     <event-sheet>Main</event-sheet>
     <size>
@@ -2482,6 +2482,33 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="GameOver" uid="121">
+                    <properties>
+                        <text>     Game Over      Press Space to Restart</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-96,400,0</font>
+                        <color>0,51,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1184</x>
+                        <y>-304</y>
+                        <z>0</z>
+                        <width>960</width>
+                        <height>384</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2560,8 +2587,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2374</x>
-                        <y>1111</y>
+                        <x>1009</x>
+                        <y>1484</y>
                         <z>0</z>
                         <width>64</width>
                         <height>96</height>
@@ -2807,11 +2834,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>534</x>
-                        <y>287</y>
+                        <x>530</x>
+                        <y>727</y>
                         <z>0</z>
                         <width>110</width>
-                        <height>126</height>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2953,8 +2980,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2686</x>
-                        <y>718</y>
+                        <x>2839</x>
+                        <y>1087</y>
                         <z>0</z>
                         <width>64</width>
                         <height>96</height>
@@ -2996,8 +3023,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2435</x>
-                        <y>313</y>
+                        <x>234</x>
+                        <y>305</y>
                         <z>0</z>
                         <width>88</width>
                         <height>128</height>
@@ -3009,6 +3036,22 @@
                     </world>
                 </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Graphics" sid="4041667064206721">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
         <layer name="HUD" sid="498317378649043">

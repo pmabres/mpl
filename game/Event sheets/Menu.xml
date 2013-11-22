@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu</name>
+    <events>
+        <variable constant="0" name="Selected" sid="6984218022829031" static="0" type="number">0</variable>
+        <event-block sid="478209055131523">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6940004046274081" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="5367634285932366" type="BtnPlay">
+                    <param id="0" name="Instance variable">Button</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="2409616890339447" type="BtnPlay" />
+                <action id="5" name="Set frame" sid="421777967954047" type="BtnPlay">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1303253923905825" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4860229275882216">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7865179793210211" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="907099459703231" type="BtnPlay">
+                    <param id="0" name="Instance variable">Button</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5604219258741883" type="BtnPlay">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7471710458807481">
+            <conditions>
+                <condition id="-22" name="Else" sid="7437720636412562" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="4634634410026691" type="BtnPlay">
+                    <param id="0" name="Instance variable">Button</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3311472702773225" type="BtnPlay">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2072516591968071">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1651972609859997" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2810148072467728" type="BtnPlay">
+                    <param id="0" name="Instance variable">Button</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5909753397049664" type="BtnPlay">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3140003824525342">
+            <conditions>
+                <condition id="-22" name="Else" sid="6146691182061032" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="3521104423781461" type="BtnPlay">
+                    <param id="0" name="Instance variable">Button</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="5091405631413898" type="BtnPlay">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4734880874497777">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2241729609820449" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="7671193723494247" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5954086798479406">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5383234790916295" type="System">
+                            <param id="0" name="Variable">Selected</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="7785487113245113" type="System">
+                            <param id="0" name="Variable">Selected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4155670402877478">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="3053827070126583" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="4032689625956381" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3476019504742443">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6492781534684972" type="System">
+                            <param id="0" name="Variable">Selected</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6147581914300215" type="System">
+                            <param id="0" name="Variable">Selected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6809791174418973">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4416066792432136" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6340985558855091" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="7679946146701711" type="System">
+                    <param id="0" name="Layout">&quot;Game&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="7804562641058479" type="System">
+                    <param id="0" name="Variable">Estado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="194723603491138">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7591196055898417" type="Keyboard">
+                    <param id="0" name="Key">13 (Return)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6745406784503551" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3029388090323079" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="696561688216684" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="2608872896544633" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3029076976136671">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="9530836729235787" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="3337379824453033" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="9793884208680736" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5415534111209591" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="7304871766262738" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
