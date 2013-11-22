@@ -215,5 +215,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="7591914599151226">
+            <conditions>
+                <condition id="3" name="Compare frame" sid="7564226426692364" type="Luz1">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">Luz1.AnimationFrameCount</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="428480711879487" type="Luz1">
+                    <param id="0" name="Instance variable">Activo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Start" sid="9775137393028881" type="Luz1">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

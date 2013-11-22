@@ -42,6 +42,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="1455540856843401" type="Luz2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8903700827328108">
@@ -83,6 +86,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="7885979552958344" type="Luz3">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8436537437433008">
@@ -114,6 +120,9 @@
                 <action id="-13" name="Set boolean" sid="3937675914597647" type="Ascensor">
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="5150559608645592" type="Luz5">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>
@@ -147,6 +156,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="7349369327978814" type="Luz5">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2288112167260445">
@@ -178,6 +190,9 @@
                 <action id="-13" name="Set boolean" sid="1655936949792552" type="Puertas">
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="2274327613243971" type="Luz1">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>
@@ -220,6 +235,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="4619280426706847" type="Luz2">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9624023121492369">
@@ -261,6 +279,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="716884789872755" type="Luz3">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5821945295204464">
@@ -288,6 +309,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="5324039306880345" type="Luz1">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1420018895648539">
@@ -309,6 +333,9 @@
                 <action id="-13" name="Set boolean" sid="9658610109328492" type="Puente">
                     <param id="0" name="Instance variable">Activo</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="4626282928966161" type="Luz4">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>
@@ -337,6 +364,9 @@
                     <param id="0" name="Instance variable">Active</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="5" name="Set frame" sid="8662616234474581" type="Luz7">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6611265233231573">
@@ -361,6 +391,9 @@
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="8367222172872279" type="Puertas" />
+                <action id="5" name="Set frame" sid="6644543191014716" type="Luz6">
+                    <param id="0" name="Frame number">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7816153736586384">
@@ -435,9 +468,12 @@
                     <param id="0" name="Instance variable">Timer</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="5912982930529753" type="Luz1">
+                    <param id="0" name="Frame number">1</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="9468074505147114">
+        <event-block collapsed="1" sid="9468074505147114">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="4781504417481752" type="Paneles">
                     <param id="0" name="Instance variable">Timer</param>
@@ -492,6 +528,9 @@
                             <param id="0" name="Instance variable">Active</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="5" name="Set frame" sid="1703876711561043" type="Luz2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="4665900715810832">
@@ -518,7 +557,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="7383190965331508">
+        <event-block collapsed="1" sid="7383190965331508">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="5981605549969553" type="Paneles">
                     <param id="0" name="Instance variable">Timer</param>
@@ -611,6 +650,9 @@
                             <param id="0" name="Instance variable">Active</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="5" name="Set frame" sid="426577609489197" type="Luz3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -637,6 +679,9 @@
                     <param id="0" name="Instance variable">Timer</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="8620632704398886" type="Luz4">
+                    <param id="0" name="Frame number">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7688113950602387">
@@ -661,6 +706,9 @@
                     <param id="0" name="Instance variable">Timer</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="5" name="Set frame" sid="1641800274206586" type="Luz5">
+                    <param id="0" name="Frame number">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2826658357132196">
@@ -684,6 +732,9 @@
                 <action id="-10" name="Set value" sid="4381060201059731" type="Paneles">
                     <param id="0" name="Instance variable">Timer</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="7037500767808794" type="Luz7">
+                    <param id="0" name="Frame number">1</param>
                 </action>
             </actions>
         </event-block>
