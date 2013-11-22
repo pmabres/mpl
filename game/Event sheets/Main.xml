@@ -51,6 +51,19 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8720756705071522">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6288963461214725" type="Bullet">
+                    <param id="0" name="Object">Puertas</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7104689852954801" type="Puertas">
+                    <param id="0" name="Instance variable">Active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9776512741263118" type="Bullet" />
+            </actions>
+        </event-block>
         <event-block any="1" sid="6384425379600511">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="8685405606330891" type="Bullet">
@@ -58,9 +71,6 @@
                 </condition>
                 <condition id="0" name="On collision with another object" sid="6528620219366374" type="Bullet">
                     <param id="0" name="Object">Paneles</param>
-                </condition>
-                <condition id="0" name="On collision with another object" sid="6298477588845457" type="Bullet">
-                    <param id="0" name="Object">Puertas</param>
                 </condition>
             </conditions>
             <actions>
