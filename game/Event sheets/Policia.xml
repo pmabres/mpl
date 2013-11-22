@@ -34,10 +34,20 @@
                 <action behavior="Platform" id="0" name="Set ignoring input" sid="815536424473773" type="DL">
                     <param id="0" name="Input">1</param>
                 </action>
+                <action id="-10" name="Set value" sid="824226554204323" type="PJ">
+                    <param id="0" name="Instance variable">pinnedTo</param>
+                    <param id="1" name="Value">3</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9361304206492953">
-            <conditions />
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9736555491753657" type="PJ">
+                    <param id="0" name="Instance variable">pinnedTo</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="434644753636684" type="PD">
                     <param id="0" name="Instance variable">Activo</param>

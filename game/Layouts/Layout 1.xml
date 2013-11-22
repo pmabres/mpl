@@ -2363,6 +2363,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <pinnedTo>0</pinnedTo>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Physics">
