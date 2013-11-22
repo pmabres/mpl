@@ -10,37 +10,34 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pin" id="1" name="Unpin" sid="6338103837520672" type="DL" />
-                <action behavior="Pin" id="1" name="Unpin" sid="4997372941226172" type="PD" />
-                <action behavior="Platform" id="11" name="Set enabled" sid="1083336875850146" type="PJ">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Physics" id="27" name="Set enabled" sid="9475987778018715" type="PJ">
-                    <param id="0" name="Mode">0</param>
-                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="8158205048491593" type="PJ" />
                 <action id="-3" name="Set position" sid="9704624292785351" type="PJ">
                     <param id="0" name="X">MJ.X</param>
                     <param id="1" name="Y">MJ.Y</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="7948834197014675" type="MJ">
-                    <param id="0" name="Pin to">PJ</param>
-                    <param id="1" name="Mode">4</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9701951241844894" type="PJ">
+                    <param id="0" name="Pin to">MJ</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="1716434303565167" type="PJ">
-                    <param id="0" name="Jump strength">MJ.Platform.JumpStrength</param>
-                </action>
-                <action behavior="Platform" id="5" name="Set gravity" sid="9265278834495017" type="PJ">
-                    <param id="0" name="Gravity">MJ.Platform.Gravity</param>
+                <action behavior="Physics" id="27" name="Set enabled" sid="9475987778018715" type="PJ">
+                    <param id="0" name="Mode">0</param>
                 </action>
                 <action id="-20" name="Set layout scale" sid="143549311182829" type="System">
                     <param id="0" name="Scale">1.0</param>
                 </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="1835102732673442" type="MJ">
+                    <param id="0" name="Input">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4425598802069265" type="DL">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="3802354047874256" type="PD">
+                    <param id="0" name="Input">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7065683707352489">
-            <conditions>
-                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="1636954199225955" type="MJ" />
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-13" name="Set boolean" sid="4020312495004754" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
@@ -147,12 +144,12 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1388314767100744">
+        <event-block disabled="1" sid="1388314767100744">
             <conditions>
-                <condition id="3" name="On key released" sid="8815732391962664" type="Keyboard">
+                <condition disabled="1" id="3" name="On key released" sid="8815732391962664" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="144324809523748" type="MJ">
+                <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="144324809523748" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
                 </condition>
             </conditions>
@@ -320,6 +317,32 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="1881344678344982">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="419743288025064" type="MJ">
+                    <param id="0" name="Object">Box</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="7615493161947462" type="PJ">
+                    <param id="0" name="Object">Box</param>
+                    <param id="1" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="1461952739887515">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="3067020398836167" type="MJ">
+                    <param id="0" name="Object">Box</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="23" name="Enable/disable collisions" sid="9231232817806524" type="PJ">
+                    <param id="0" name="Object">Box</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

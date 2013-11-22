@@ -3,10 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PJ</name>
     <events>
-        <event-block sid="5782090279348332">
+        <event-block disabled="1" sid="5782090279348332">
             <conditions>
                 <condition id="2" name="Key is down" sid="6180461659622803" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
+                    <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
                 <condition behavior="Physics" id="1" name="Compare velocity" sid="8846054869777858" type="PJ">
                     <param id="0" name="Which">0</param>
@@ -22,10 +22,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="7516254942295464">
+        <event-block disabled="1" sid="7516254942295464">
             <conditions>
                 <condition id="2" name="Key is down" sid="2271377482036185" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
+                    <param id="0" name="Key">39 (Right arrow)</param>
                 </condition>
                 <condition behavior="Physics" id="1" name="Compare velocity" sid="2608532950624413" type="PJ">
                     <param id="0" name="Which">0</param>
@@ -41,7 +41,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2879937779518975">
+        <event-block disabled="1" sid="2879937779518975">
             <conditions>
                 <condition behavior="Physics" id="1" name="Compare velocity" sid="8936419889414065" type="PJ">
                     <param id="0" name="Which">0</param>
@@ -56,7 +56,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1441706260086834">
+        <event-block disabled="1" sid="1441706260086834">
             <conditions>
                 <condition behavior="Physics" id="1" name="Compare velocity" sid="6858247759295726" type="PJ">
                     <param id="0" name="Which">0</param>

@@ -2230,7 +2230,6 @@
                         <Press>false</Press>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>330</max-speed>
@@ -2239,8 +2238,8 @@
                                 <jump-strength>1</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -2312,11 +2311,10 @@
                                 <jump-strength>650</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2366,41 +2364,30 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>330</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>650</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>Yes</default-controls>
-                                <initial-state>Disabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="ScrollTo" />
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
-                                <density>1</density>
+                                <density>12</density>
                                 <friction>0.1</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
                                 <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>352</x>
-                        <y>320</y>
+                        <x>320</x>
+                        <y>352</y>
                         <z>0</z>
-                        <width>62</width>
+                        <width>74</width>
                         <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0.512820542</hotspotX>
@@ -2488,7 +2475,7 @@
                                 <immovable>No</immovable>
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>Yes</prevent-rotation>
-                                <density>0.0001</density>
+                                <density>0.1</density>
                                 <friction>0.1</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0</linear-damping>
@@ -2609,11 +2596,10 @@
                                 <jump-strength>1150</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <default-controls>No</default-controls>
-                                <initial-state>Disabled</initial-state>
+                                <default-controls>Yes</default-controls>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>

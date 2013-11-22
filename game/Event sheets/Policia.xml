@@ -10,37 +10,34 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pin" id="1" name="Unpin" sid="2745160670588033" type="DL" />
-                <action behavior="Pin" id="1" name="Unpin" sid="3327538809839929" type="MJ" />
-                <action behavior="Platform" id="11" name="Set enabled" sid="6348204103805421" type="PJ">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Physics" id="27" name="Set enabled" sid="8450831187044248" type="PJ">
-                    <param id="0" name="Mode">0</param>
-                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="3633723286625131" type="PJ" />
                 <action id="-3" name="Set position" sid="9211171718225884" type="PJ">
                     <param id="0" name="X">PD.X</param>
                     <param id="1" name="Y">PD.Y</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="8671474835521725" type="PD">
-                    <param id="0" name="Pin to">PJ</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="8671474835521725" type="PJ">
+                    <param id="0" name="Pin to">PD</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="6983113179990167" type="PJ">
-                    <param id="0" name="Jump strength">PD.Platform.JumpStrength</param>
-                </action>
-                <action behavior="Platform" id="5" name="Set gravity" sid="1864674639983279" type="PJ">
-                    <param id="0" name="Gravity">PD.Platform.Gravity</param>
+                <action behavior="Physics" id="27" name="Set enabled" sid="8450831187044248" type="PJ">
+                    <param id="0" name="Mode">0</param>
                 </action>
                 <action id="-20" name="Set layout scale" sid="1496035849926772" type="System">
                     <param id="0" name="Scale">1.0</param>
                 </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="4074187564785108" type="PD">
+                    <param id="0" name="Input">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="9005512481496857" type="MJ">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="815536424473773" type="DL">
+                    <param id="0" name="Input">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9361304206492953">
-            <conditions>
-                <condition behavior="Pin" id="0" inverted="1" name="Is pinned" sid="8091927504878657" type="PD" />
-            </conditions>
+            <conditions />
             <actions>
                 <action id="-13" name="Set boolean" sid="434644753636684" type="PD">
                     <param id="0" name="Instance variable">Activo</param>

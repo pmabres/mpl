@@ -20,18 +20,25 @@
                 <condition id="-2" name="On start of layout" sid="2129160100224186" type="System" />
             </conditions>
             <actions>
+                <action behavior="Pin" id="1" name="Unpin" sid="6757037153151157" type="PJ" />
                 <action id="-3" name="Set position" sid="3391835111097294" type="DL">
                     <param id="0" name="X">PJ.X</param>
                     <param id="1" name="Y">PJ.Y</param>
                 </action>
-                <action behavior="Pin" id="0" name="Pin to object" sid="63330340106794" type="DL">
-                    <param id="0" name="Pin to">PJ</param>
+                <action behavior="Pin" id="0" name="Pin to object" sid="2650708436238115" type="PJ">
+                    <param id="0" name="Pin to">DL</param>
                     <param id="1" name="Mode">0</param>
                 </action>
-                <action behavior="Platform" id="4" name="Set jump strength" sid="1169530528580181" type="PJ">
-                    <param id="0" name="Jump strength">DL.Platform.JumpStrength</param>
-                </action>
                 <action id="2" name="Stop" sid="7352138049372181" type="Paneles" />
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7463066531814656" type="DL">
+                    <param id="0" name="Input">0</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7943895413728951" type="MJ">
+                    <param id="0" name="Input">1</param>
+                </action>
+                <action behavior="Platform" id="0" name="Set ignoring input" sid="7120602441547893" type="PD">
+                    <param id="0" name="Input">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="6384425379600511">
@@ -79,12 +86,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pin" id="1" name="Unpin" sid="5314993316986687" type="DL" />
-                <action behavior="Pin" id="1" name="Unpin" sid="4828923651637858" type="MJ" />
-                <action behavior="Pin" id="1" name="Unpin" sid="1632340483248202" type="PD" />
-                <action behavior="Platform" id="11" name="Set enabled" sid="3426939501456957" type="PJ">
-                    <param id="0" name="State">0</param>
-                </action>
                 <action id="-20" name="Set layout scale" sid="7337634279868105" type="System">
                     <param id="0" name="Scale">0.425</param>
                 </action>
