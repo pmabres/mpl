@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Ascensor</name>
     <events>
-        <variable constant="0" name="1Nivel" sid="7508141434931871" static="0" type="number">382</variable>
+        <variable constant="1" name="1NIVEL" sid="7508141434931871" static="0" type="number">381</variable>
         <event-block collapsed="1" sid="2234658396488287">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="407467404699327" type="Ascensor">

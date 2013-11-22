@@ -109,17 +109,19 @@
         </event-block>
         <event-block sid="9455548555577472">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="954668061656144" type="PD">
+                <condition id="9" name="Is overlapping at offset" sid="954668061656144" type="PD">
                     <param id="0" name="Object">PuertaComun</param>
+                    <param id="1" name="Offset X">20</param>
+                    <param id="2" name="Offset Y">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="1726531309891415" type="PuertaComun">
-                    <param id="0" name="Frame number">0</param>
-                </action>
                 <action id="-13" name="Set boolean" sid="1521865860620287" type="PuertaComun">
                     <param id="0" name="Instance variable">Open</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="1726531309891415" type="PuertaComun">
+                    <param id="0" name="Frame number">0</param>
                 </action>
             </actions>
         </event-block>

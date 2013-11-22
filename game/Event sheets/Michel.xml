@@ -145,7 +145,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3778392258745287" type="MJ">
-                    <param id="0" name="Animation">&quot;Izq&quot;</param>
+                    <param id="0" name="Animation">&quot;Der&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="2269722271627193" type="MJ">
@@ -154,18 +154,18 @@
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="1388314767100744">
+        <event-block sid="1388314767100744">
             <conditions>
-                <condition disabled="1" id="3" name="On key released" sid="8815732391962664" type="Keyboard">
+                <condition id="3" name="On key released" sid="8815732391962664" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
-                <condition disabled="1" id="-8" name="Is boolean instance variable set" sid="144324809523748" type="MJ">
+                <condition id="-8" name="Is boolean instance variable set" sid="144324809523748" type="MJ">
                     <param id="0" name="Instance variable">Activo</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="3461875534758421" type="MJ">
-                    <param id="0" name="Animation">&quot;Stay&quot;</param>
+                    <param id="0" name="Animation">&quot;StayI&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
