@@ -337,6 +337,41 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Paneles" uid="76">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Pressed>false</Pressed>
+                        <Timer>0</Timer>
+                        <Numero>6</Numero>
+                        <Tipo>4</Tipo>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>923</x>
+                        <y>552.077026367</y>
+                        <z>0</z>
+                        <width>129.614807129</width>
+                        <height>51.845924377</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Plataformas" uid="34">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -1770,9 +1805,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>768</x>
-                        <y>32</y>
+                        <y>416</y>
                         <z>0</z>
-                        <width>224</width>
+                        <width>64</width>
                         <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -2428,8 +2463,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2452</x>
-                        <y>328</y>
+                        <x>1317</x>
+                        <y>314</y>
                         <z>0</z>
                         <width>74</width>
                         <height>96</height>
@@ -2565,8 +2600,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2048</x>
-                        <y>320</y>
+                        <x>1149</x>
+                        <y>308</y>
                         <z>0</z>
                         <width>128</width>
                         <height>128</height>
