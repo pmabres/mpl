@@ -363,6 +363,30 @@
                 <action id="-9" name="Destroy" sid="8367222172872279" type="Puertas" />
             </actions>
         </event-block>
+        <event-block sid="7816153736586384">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3548853013810229" type="Box">
+                    <param id="0" name="Object">Paneles</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="6792139464154096" type="Paneles">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2061112701922826" type="Puertas">
+                    <param id="0" name="Instance variable">Numero</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="2155622710114598" type="Paneles">
+                    <param id="0" name="Instance variable">Pressed</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="444960940118822" type="Puertas" />
+            </actions>
+        </event-block>
         <comment>Timer</comment>
         <event-block sid="1358835693754669">
             <conditions>

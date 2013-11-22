@@ -20,6 +20,9 @@
                 <condition id="-2" name="On start of layout" sid="2129160100224186" type="System" />
             </conditions>
             <actions>
+                <action id="-20" name="Set layout scale" sid="7414081579270254" type="System">
+                    <param id="0" name="Scale">0.425</param>
+                </action>
                 <action behavior="Pin" id="1" name="Unpin" sid="6757037153151157" type="PJ" />
                 <action id="-3" name="Set position" sid="3391835111097294" type="DL">
                     <param id="0" name="X">PJ.X</param>
@@ -84,18 +87,6 @@
             </conditions>
             <actions>
                 <action id="-26" name="Restart layout" sid="9839198944517211" type="System" />
-            </actions>
-        </event-block>
-        <event-block sid="3848227064596637">
-            <conditions>
-                <condition id="2" name="Key is down" sid="7279765612274051" type="Keyboard">
-                    <param id="0" name="Key">52 (4)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-20" name="Set layout scale" sid="7337634279868105" type="System">
-                    <param id="0" name="Scale">0.425</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="1682118503699177">
