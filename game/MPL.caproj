@@ -20,8 +20,8 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -481,6 +481,9 @@
                     <frame duration="1" hotspotX="0.512821" hotspotY="0.512821" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Pag" sid="4706259279560741">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

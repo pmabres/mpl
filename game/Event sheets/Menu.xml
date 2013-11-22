@@ -22,6 +22,10 @@
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="6954736111347561" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4860229275882216">
@@ -193,9 +197,74 @@
                     <param id="0" name="Layer">1</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="3916425755312762" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="2608872896544633" type="System">
                     <param id="0" name="Variable">Selected</param>
                     <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <variable constant="0" name="Hoja" sid="8491623916157364" static="0" type="number">1</variable>
+        <event-block sid="6413340752793225">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="6042724426421127" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2543885211174876" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="1811030014040109" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="4271443478653754" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8590160474574018" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="1707374347266336" type="System">
+                    <param id="0" name="Variable">Hoja</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7843396026528977">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="8713723908841427" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8391995368429538" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="3576249620958391" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="8688954849049571" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5894642819650495" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8283761468974152" type="System">
+                    <param id="0" name="Variable">Hoja</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -211,17 +280,35 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-4" name="Set layer visible" sid="9793884208680736" type="System">
-                    <param id="0" name="Layer">1</param>
-                    <param id="1" name="Visibility">0</param>
-                </action>
                 <action id="-4" name="Set layer visible" sid="5415534111209591" type="System">
                     <param id="0" name="Layer">0</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="9793884208680736" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="5467797618573698" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action id="-9" name="Set value" sid="7304871766262738" type="System">
                     <param id="0" name="Variable">Selected</param>
                     <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3884991158516116">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="980503639274762" type="System">
+                    <param id="0" name="Variable">Selected</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8958674406656706" type="Pag">
+                    <param id="0" name="Text">&quot;Pag. &quot; &amp; Hoja &amp; &quot;/2&quot;</param>
                 </action>
             </actions>
         </event-block>

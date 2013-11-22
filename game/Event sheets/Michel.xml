@@ -17,7 +17,7 @@
                 </action>
                 <action behavior="Pin" id="0" name="Pin to object" sid="9701951241844894" type="PJ">
                     <param id="0" name="Pin to">MJ</param>
-                    <param id="1" name="Mode">0</param>
+                    <param id="1" name="Mode">3</param>
                 </action>
                 <action behavior="Physics" id="27" name="Set enabled" sid="9475987778018715" type="PJ">
                     <param id="0" name="Mode">0</param>
@@ -266,7 +266,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3127290753922562">
+        <event-block disabled="1" sid="3127290753922562">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="1234151415896589" type="MJ">
                     <param id="0" name="Instance variable">Lado</param>
@@ -283,7 +283,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="878746113403291">
+        <event-block disabled="1" sid="878746113403291">
             <conditions>
                 <condition id="-7" name="Compare instance variable" sid="7049148444116085" type="MJ">
                     <param id="0" name="Instance variable">Lado</param>
