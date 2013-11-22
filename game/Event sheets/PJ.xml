@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PJ</name>
+    <events>
+        <event-block sid="5782090279348332">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6180461659622803" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="8846054869777858" type="PJ">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">-200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="927462667429331" type="PJ">
+                    <param id="0" name="Force X">-100</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7516254942295464">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2271377482036185" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="2608532950624413" type="PJ">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">200</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="8216212824655509" type="PJ">
+                    <param id="0" name="Force X">100</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2879937779518975">
+            <conditions>
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="8936419889414065" type="PJ">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="15" name="Set velocity" sid="3671881999897696" type="PJ">
+                    <param id="0" name="X component">pj.Physics.VelocityX - 10</param>
+                    <param id="1" name="Y component">pj.Physics.VelocityY</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1441706260086834">
+            <conditions>
+                <condition behavior="Physics" id="1" name="Compare velocity" sid="6858247759295726" type="PJ">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="15" name="Set velocity" sid="7719890217202568" type="PJ">
+                    <param id="0" name="X component">pj.Physics.VelocityX + 10</param>
+                    <param id="1" name="Y component">pj.Physics.VelocityY</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
